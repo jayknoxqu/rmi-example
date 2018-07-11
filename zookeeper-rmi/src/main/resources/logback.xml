@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (c) 2007-2017, Kunming niguang Science technology Co., Ltd.
+
+    All rights reserved.
+
+-->
+<configuration debug="false" scan="true" scanPeriod="1000 seconds">
+    <!-- Output to Console -->
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %level %c:%L - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- 打印级别，大小写无关：TRACE, DEBUG, INFO, WARN, ERROR, ALL 和  OFF 默认是DEBUG -->
+    <root level="INFO">
+        <appender-ref ref="Console" />
+    </root>
+
+    <logger name="org.springframework" level="WARN"/>
+    <logger name="com.baomidou" level="DEBUG"/>
+    <logger name="org.mybatis" level="DEBUG"/>
+    <logger name="org.apache.ibatis" level="DEBUG"/>
+    <logger name="springfox.documentation" level="WARN"/>
+    <logger name="org.apache.http" level="WARN"/>
+    <logger name="org.hibernate" level="WARN"/>
+    <logger name="com.fasterxml" level="WARN"/>
+    <logger name="org.crsh.plugin" level="WARN"/>
+    <logger name="com.zaxxer.hikari" level="WARN"/>
+    <logger name="org.apache.commons" level="WARN"/>
+    <logger name="org.apache.axis2" level="WARN"/>
+    <logger name="org.apache.axiom" level="WARN"/>
+    <logger name="com.netflix" level="WARN"/>
+    <logger name="httpclient.wire" level="WARN"/>
+    <logger name="org.mybatis.spring.mapper.ClassPathMapperScanner" level="WARN"/>
+    <logger name="org.apache.ibatis.io" level="WARN"/>
+    <logger name="com.baomidou.mybatisplus.MybatisConfiguration" level="WARN"/>
+
+    <logger name="com.ibatis" level="DEBUG"/>
+    <logger name="com.ibatis.common.jdbc.SimpleDataSource" level="DEBUG"/>
+    <logger name="com.ibatis.common.jdbc.ScriptRunner" level="DEBUG"/>
+    <logger name="com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate" level="DEBUG"/>
+    <logger name="java.sql.Connection" level="DEBUG"/>
+    <logger name="java.sql.Statement" level="DEBUG"/>
+    <logger name="java.sql.PreparedStatement" level="DEBUG"/>
+
+
+</configuration>
