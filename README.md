@@ -414,11 +414,48 @@ https://stuff.mit.edu/afs/athena/software/java/java_v1.2.2/distrib/sun4x_56/docs
 
 ### Zookeeper实现rmi
 
-出处:`http://www.importnew.com/20344.html`
+#### 安装Zookeeper
+
+解压 ZooKeeper
+
+```
+tar -zxvf zookeeper-3.4.12.tar.gz
+```
+
+在 conf 目录新建 zoo.cfg
+
+ 
+
+```
+cd zookeeper-3.4.12/conf
+vim zoo.cfg
+```
+
+
+
+zoo.cfg 代码如下（自己指定 log 文件目录）：
+
+```
+tickTime=2000
+dataDir=/usr/local/zookeeper-3.4.12/data 
+dataLogDir=/usr/local/zookeeper-3.4.12/log
+clientPort=2181
+```
+
+
+
+在 bin 目录下，启动 Zookeeper：
+
+```
+cd zookeeper-3.4.12/bin
+./zkServer.sh start
+```
+
+
 
 
 #### 消费者:
-
+出处:`http://www.importnew.com/20344.html`
 ```
 public class RmiConsumer {
 
